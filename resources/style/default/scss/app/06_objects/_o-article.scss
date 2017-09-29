@@ -1,0 +1,26 @@
+.o-article {
+  @include transition();
+  border: 1px solid rgba($text-color, .2);
+  border-radius: 2px;
+  background-color: $white;
+
+  &_list {
+    list-style-type: none;
+    padding: .6rem;
+    border-top: 1px solid rgba($brand-primary, .5);
+    margin: 0;
+  }
+
+  &_item + &_item {
+    margin-top: .3rem;
+  }
+
+  &_item a {
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+  }
+
+}

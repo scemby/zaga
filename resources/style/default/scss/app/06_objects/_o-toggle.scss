@@ -1,0 +1,57 @@
+.o-toggle {
+
+  &_trigger {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &_label {
+    position: relative;
+    margin: 0;
+    -webkit-touch-callout: none;
+    user-select: none;
+    cursor: pointer;
+
+    .first,
+    .second {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+
+    .first {
+      opacity: 1;
+    }
+
+    .second {
+      opacity: 0;
+    }
+
+  }
+
+  &_body {
+    @include transition($time: 800ms);
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &_trigger[type="checkbox"]:checked ~ .o-toggle_label {
+    color: $brand-primary;
+
+    .first {
+      opacity: 0;
+    }
+
+    .second {
+      opacity: 1;
+    }
+
+  }
+
+  &_trigger[type="checkbox"]:checked ~ .o-toggle_body {
+    max-height: 1000px;
+  }
+
+}

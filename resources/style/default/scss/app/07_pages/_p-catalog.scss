@@ -1,0 +1,7 @@
+.p-catalog {
+  padding: 1rem 0;
+
+  @media screen and ('min-width: 768px') {
+    padding: 3rem 0;
+  }
+}

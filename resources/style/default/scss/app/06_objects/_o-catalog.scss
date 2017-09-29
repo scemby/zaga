@@ -1,0 +1,44 @@
+.o-catalog {
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: .7rem 0 0;
+  }
+
+  &_item {
+    width: 100%;
+    padding: .5rem;
+    font-size: 14px;
+  }
+
+  .o-article:hover &_link {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+
+  &_link {
+    display: block;
+    padding: .6rem .8rem;
+    font-weight: bold;
+  }
+
+  @media screen and ('min-width: 568px') and ('max-width: 767px') {
+
+    &_item {
+      width: 50%;
+    }
+
+  }
+
+  @media screen and ('min-width: 768px') {
+
+    &_item {
+      width: 33.33%;
+    }
+
+  }
+
+}

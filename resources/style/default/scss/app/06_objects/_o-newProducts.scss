@@ -1,0 +1,73 @@
+.o-newProducts {
+
+  &_mainTtl {
+    color: darken($text-color, 14%);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &_ttl {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  &_item {
+    display: block;
+    font-size: 15px;
+
+    @media screen and ('max-width: 991px') {}
+
+    .label {
+      display: inline-block;
+      padding: .4em .6em;
+      margin-top: .2rem;
+      font-size: 12px;
+    }
+
+    &:hover .o-newProducts_ttl {
+      color: $brand-primary;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
+  }
+
+  &_item:first-child {
+    margin-top: 1rem;
+  }
+
+  &_item + &_item {
+    padding-top: .5rem;
+    border-top: 1px solid rgba($text-color, .2);
+    margin-top: .5rem;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+
+    td {
+      vertical-align: top;
+    }
+
+    td:first-child {
+      width: 60px;
+
+      @media screen and ('max-width: 991px') {
+        width: 100px;
+      }
+
+    }
+
+    td:last-child {
+      padding-left: .4rem;
+    }
+
+  }
+
+}

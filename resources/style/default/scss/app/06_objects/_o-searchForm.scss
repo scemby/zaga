@@ -1,0 +1,12 @@
+.o-searchForm {
+
+  @media screen and ('max-width: 991px') {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group:first-child {
+    flex-grow: 1;
+  }
+
+}

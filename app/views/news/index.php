@@ -10,43 +10,45 @@ $this->title = $page->seo('title', $page->model->title);
 $this->params['breadcrumbs'][] = $page->model->title;
 ?>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
+<div class="o-news">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
 
-      <h1><?= $this->title ?></h1>
+        <h1 class="m-0"><?= $this->title ?></h1>
 
-      <ul class="o-news">
+        <ul class="o-news_list">
 
-        <?php foreach($news as $item) { ?>
-          <li class="o-news_item">
-            <div class="row">
-              <div class="col-md-2">
-                <?= Html::img($item->thumb(160, 120), ['class' => 'o-news_img']) ?>
-              </div>
-
-              <div class="col-md-10">
-
-                <a class="o-news_link" href="#"><?= $item->title ?></a>
-
-                <div class="o-news_date"><?= $item->date ?></div>
-
-                <div class="o-news_desc"><?= $item->short ?></div>
-
-                <div>
-                  <?php foreach($item->tags as $tag) : ?>
-                    <a href="<?= Url::to(['/news', 'tag' => $tag]) ?>" class="label label-info"><?= $tag ?></a>
-                  <?php endforeach; ?>
+          <?php foreach($news as $item) { ?>
+            <li class="o-news_item">
+              <div class="row">
+                <div class="col-md-2">
+                  <?= Html::img($item->thumb(160, 120), ['class' => 'o-news_img']) ?>
                 </div>
 
+                <div class="col-md-10">
+
+                  <!-- TODO add link to novelty instead of # -->
+                  <a class="o-news_link" href="#"><?= $item->title ?></a>
+
+                  <div class="o-news_date"><?= $item->date ?></div>
+
+                  <div class="o-news_desc"><?= $item->short ?></div>
+
+                  <div>
+                    <?php foreach($item->tags as $tag) : ?>
+                      <a href="<?= Url::to(['/news', 'tag' => $tag]) ?>" class="label label-info"><?= $tag ?></a>
+                    <?php endforeach; ?>
+                  </div>
+
+                </div>
               </div>
-            </div>
-          </li>
-        <?php } ?>
+            </li>
+          <?php } ?>
 
-      </ul>
+        </ul>
 
-
+      </div>
     </div>
   </div>
 </div>
