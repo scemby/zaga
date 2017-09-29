@@ -1,0 +1,33 @@
+.o-categoryList {
+  padding: 1rem 0;
+
+  @media screen and ('min-width: 768px') {
+    padding: 3rem 0;
+  }
+
+  &_ttl {
+    margin: 0 0 2rem;
+  }
+
+  &_item {}
+
+  &_item img {
+    width: 100%;
+
+    @media screen and ('max-width: 767px') {
+      margin-bottom: .2rem;
+    }
+
+  }
+
+  &_item + &_item {
+    padding-top: 2rem;
+    border-top: 1px solid rgba($text-color, .3);
+    margin-top: 2rem;
+  }
+
+  a {
+    color: $brand-primary;
+  }
+
+}

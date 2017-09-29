@@ -17,7 +17,19 @@ if(!empty($item->data->color) && is_array($item->data->color)) {
     }
 }
 ?>
-<h1><?= $item->seo('h1', $item->title) ?></h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><?= $item->seo('h1', $item->title) ?></h1>
+
+
+    </div>
+  </div>
+</div>
+
+
+
 
 <div class="row">
     <div class="col-md-4">
