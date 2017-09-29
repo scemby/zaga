@@ -42,6 +42,7 @@
 /*------------------------------------------------------------------------------------
   '05_components'
 ------------------------------------------------------------------------------------*/
+@import "05_components/c-hr";
 @import "05_components/c-icon";
 
 
@@ -49,9 +50,11 @@
   '06_objects'
 ------------------------------------------------------------------------------------*/
 @import "06_objects/o-copyright";
+@import "06_objects/o-gallery";
 @import "06_objects/o-mainFooter";
 @import "06_objects/o-mainHeader";
 @import "06_objects/o-news";
+@import "06_objects/o-newsView";
 @import "06_objects/o-novelty";
 @import "06_objects/o-slider";
 @import "06_objects/o-social";
@@ -74,6 +77,7 @@
 @import "08_trumps/flex";
 //@import "08_trumps/font";
 //@import "08_trumps/position";
+@import "08_trumps/spacing";
 //@import "08_trumps/text-colors";
 @import "08_trumps/typography";
 //@import "08_trumps/visibility";

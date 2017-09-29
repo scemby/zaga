@@ -1,0 +1,15 @@
+.o-gallery {
+  padding-top: 2rem;
+  border-top: 1px solid rgba($brand-primary, .5);
+  margin-top: 3rem;
+
+  &_ttl {
+    margin: 0 0 1rem;
+    color: darken($text-color, 16%);
+  }
+
+  img {
+    width: 100%;
+  }
+
+}
