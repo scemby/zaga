@@ -7,10 +7,12 @@
   }
 
   &_label {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
     margin: 0;
-    -webkit-touch-callout: none;
-    user-select: none;
     cursor: pointer;
 
     .first,
@@ -27,6 +29,10 @@
 
     .second {
       opacity: 0;
+    }
+
+    .o-catalog_item-drop:hover > & {
+      color: $brand-primary;
     }
 
   }
@@ -52,6 +58,19 @@
 
   &_trigger[type="checkbox"]:checked ~ .o-toggle_body {
     max-height: 1000px;
+  }
+
+  &_trigger[type="checkbox"]:checked ~ .o-catalog_list {
+    display: block;
+  }
+
+  .o-catalog > .o-catalog_list > .o-catalog_item > &_trigger[type="checkbox"]:checked ~ .o-catalog_list {
+    border: 1px solid rgba($text-color, .2);
+    border-top: 0;
+  }
+
+  .o-catalog > .o-catalog_list > .o-catalog_item > &_trigger[type="checkbox"]:checked ~ a {
+    border-bottom: 0;
   }
 
 }
