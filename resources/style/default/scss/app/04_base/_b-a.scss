@@ -10,4 +10,10 @@ a {
 
   }
 
+  .shopCart &:hover,
+  .shopCart &:focus,
+  .shopCart &:focus:active {
+    color: $white;
+  }
+
 }

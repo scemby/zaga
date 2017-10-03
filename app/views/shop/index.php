@@ -15,20 +15,22 @@ function renderNode($node, $initialImage = true){
         $html = '<li class="o-catalog_item">';
 
         if ($initialImage) {
-          $html .= Html::img($node->image, ['width' => '100%']);
+          $nodeImage = Catalog::cat($node->category_id);
+          $html .= '<div class="text-center">' . Html::img($nodeImage->image) . '</div>';
         }
 
         $html .= Html::a($node->title, ['/shop/cat', 'slug' => $node->slug]) . '</li>';
     } else {
-      $html = '<li class="o-catalog_item o-catalog_item-drop">';
+      $html = '<li class="o-catalog_item o-catalog_item-drop relative">';
 
       if ($initialImage) {
-        $html .= Html::img($node->image, ['width' => '100%']);
+        $nodeImage = Catalog::cat($node->category_id);
+        $html .= '<div class="text-center">' . Html::img($nodeImage->image) . '</div>';
       }
 
       $html .= '<input id="' . $node->slug . '" class="o-toggle_trigger" type="checkbox">
-        <a href="#">' . $node->title . '</a>
         <label class="o-toggle_label" for="' . $node->slug . '">
+          ' . $node->title . '
           <span class="first">↓</span>
           <span class="second">←</span>
         </label>';

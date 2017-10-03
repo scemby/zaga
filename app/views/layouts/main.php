@@ -29,7 +29,7 @@ $this->beginContent('@app/views/layouts/base.php'); ?>
             </a>
           </div>
 
-          <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="collapse navbar-collapse shopCart" id="navbar-menu">
             <?= Menu::widget([
               'options' => ['class' => 'nav navbar-nav'],
               'items' => [
@@ -41,7 +41,8 @@ $this->beginContent('@app/views/layouts/base.php'); ?>
                 ['label' => 'Kontakt', 'url' => ['/contact/index']],
               ],
             ]); ?>
-            <a href="<?= Url::to(['/shopcart']) ?>" class="btn btn-default navbar-btn navbar-right" title="Pošalji upit">
+            <a href="<?= Url::to(['/shopcart']) ?>" class="btn btn-default navbar-btn navbar-right color-white"
+                title="Pošalji upit">
               <i class="c-icon"><img class="c-icon_img" src="<?= $asset->baseUrl ?>/icons/info.png" alt="i"></i>
               <?php if($goodsCount > 0) { ?>
                   <?= $goodsCount ?> <?= $goodsCount > 1 ? 'items' : 'item' ?> - <?php echo number_format(Shopcart::cost(), 2, ',', '.'); ?> HRK
