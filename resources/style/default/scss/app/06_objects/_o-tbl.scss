@@ -5,6 +5,10 @@
     width: 100%;
   }
 
+  &-fix {
+    table-layout: fixed;
+  }
+
   &-middle &_cell {
     vertical-align: middle;
   }

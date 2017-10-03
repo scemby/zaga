@@ -132,7 +132,7 @@ $this->beginContent('@app/views/layouts/base.php'); ?>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="o-tbl o-tbl-full o-tbl-middle">
+          <div class="o-tbl o-tbl-full o-tbl-middle o-tbl-fix">
             <div class="o-tbl_cell text-md-down-center">
               © 2017 - zaga-racki.hr
             </div>
